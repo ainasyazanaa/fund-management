@@ -11,7 +11,10 @@ app.use(cors())
 app.get('/status', (req,res) =>{res.send({
     message: "Hello aina"
 })})
-const port = 8081;
+
+app.post('/register', (req,res) =>{res.send({
+    message: `${req.body.email} successully registered!`
+})})
 
 
-app.listen(port)
+app.listen(8081)
